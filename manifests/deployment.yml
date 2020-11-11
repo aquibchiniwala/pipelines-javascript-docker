@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aquibchiniwalapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aquibchiniwalapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aquibchiniwalapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aquibchiniwalapipelinesjavascriptdocker 
+          image: testactenbd.azurecr.io/aquibchiniwalapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
